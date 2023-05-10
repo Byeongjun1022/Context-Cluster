@@ -1,5 +1,6 @@
 # dataset settings
 dataset_type = 'ADE20KDataset'
+# data_root = '/mnt/study/depth/Datasets/ADE20K/test/release_test'
 data_root = '{path}/data/ade/ADEChallengeData2016'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
@@ -52,6 +53,7 @@ data = dict(
     test=dict(
         type=dataset_type,
         data_root=data_root,
+        # img_dir='testing',
         img_dir='images/validation',
         ann_dir='annotations/validation',
         pipeline=test_pipeline))
